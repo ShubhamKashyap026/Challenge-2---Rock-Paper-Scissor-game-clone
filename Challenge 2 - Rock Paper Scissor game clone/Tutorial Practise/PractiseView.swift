@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct PractiseView: View {
+    // properties
+    let agents = ["Cyril", "Lana", "Pam", "Sterling"]
+
+    
+    // body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ForEach(agents, id: \.self) { name in
+            Text("Row \(name)")
+        }
     }
 }
 
